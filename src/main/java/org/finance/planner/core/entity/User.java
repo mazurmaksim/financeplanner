@@ -17,8 +17,12 @@ public class User {
     @Column(name = "last_name")
     private String lasName;
 
-    @OneToOne(mappedBy = "user")
-    private FinanceUser financeUser;
+//    @OneToOne(mappedBy = "user")
+//    private FinanceUser financeUser;
+
+    @Column(name= "token")
+    private String token;
+
     public String getName() {
         return name;
     }
@@ -43,11 +47,19 @@ public class User {
         this.id = id;
     }
 
-    public FinanceUser getFinanceUser() {
-        return financeUser;
+//    public FinanceUser getFinanceUser() {
+//        return financeUser;
+//    }
+//
+//    public void setFinanceUser(FinanceUser financeUser) {
+//        this.financeUser = financeUser;
+//    }
+
+    public String getToken() {
+        return token;
     }
 
-    public void setFinanceUser(FinanceUser financeUser) {
-        this.financeUser = financeUser;
+    public void setToken(String token) {
+        this.token = token;
     }
 }

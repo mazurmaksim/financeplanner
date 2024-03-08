@@ -4,8 +4,8 @@ import jakarta.persistence.*;
 
 import java.util.UUID;
 
-@Entity
-@Table(name = "bill")
+//@Entity
+//@Table(name = "bill")
 public class Bill {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
